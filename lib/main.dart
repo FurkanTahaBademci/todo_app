@@ -19,11 +19,11 @@ Future<void> setupHive() async {
   Hive.registerAdapter(TaskAdapter());
   var taskBoxs = await Hive.openBox<Task>('tasks');
 
-  for (var task in taskBoxs.values) {
+  /*for (var task in taskBoxs.values) {
     if (task.createdAt.day != DateTime.now().day) {
       taskBoxs.delete(task.id);
     }
-  }
+  }*/
 
 }
 
